@@ -20,8 +20,9 @@ Captured SSH traffic between macOS and a Fedora Linux VM.
 
 ### Evidence
 
-See screenshots folder:
-- ssh-analysis.png
+![SSH Analysis](screenshots/ssh-analysis.png)
+
+![HTTP Analysis](screenshots/http-analysis.png)
 
 ---
 
