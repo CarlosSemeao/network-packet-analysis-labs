@@ -1,0 +1,20 @@
+    1 0.000000000  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=1 Ack=1 Win=2048 Len=0 TSval=1364287011 TSecr=2711061145
+    2 0.025953166  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
+    3 0.025989875  10.211.55.8 → 10.211.55.2  SSH 102 Server: Encrypted packet (len=36)
+    4 0.026102625  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=37 Ack=37 Win=2048 Len=0 TSval=1364287037 TSecr=2711061171
+    5 0.050908000  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
+    6 0.050928875  10.211.55.8 → 10.211.55.2  SSH 102 Server: Encrypted packet (len=36)
+    7 0.051052916  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=73 Ack=73 Win=2048 Len=0 TSval=1364287062 TSecr=2711061196
+    8 0.075551833  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
+    9 0.075571000  10.211.55.8 → 10.211.55.2  SSH 102 Server: Encrypted packet (len=36)
+   10 0.075654291  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=109 Ack=109 Win=2048 Len=0 TSval=1364287087 TSecr=2711061221
+   11 0.097452125  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
+   12 0.097477833  10.211.55.8 → 10.211.55.2  SSH 102 Server: Encrypted packet (len=36)
+   13 0.097589833  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=145 Ack=145 Win=2048 Len=0 TSval=1364287109 TSecr=2711061243
+   14 0.124468333  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
+   15 0.124522791  10.211.55.8 → 10.211.55.2  SSH 102 Server: Encrypted packet (len=36)
+   16 0.124952666  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=181 Ack=181 Win=2048 Len=0 TSval=1364287136 TSecr=2711061270
+   17 0.148321125  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
+   18 0.148364250  10.211.55.8 → 10.211.55.2  SSH 102 Server: Encrypted packet (len=36)
+   19 0.148570125  10.211.55.2 → 10.211.55.8  TCP 66 61718 → 22 [ACK] Seq=217 Ack=217 Win=2048 Len=0 TSval=1364287160 TSecr=2711061294
+   20 0.171384916  10.211.55.2 → 10.211.55.8  SSH 102 Client: Encrypted packet (len=36)
