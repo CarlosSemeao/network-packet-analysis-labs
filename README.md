@@ -100,9 +100,100 @@ The goal was to strengthen practical understanding of how network traffic can be
 ### Commands Practised
 
 #### Basic capture on an interface
-
-```bash
+```
 tcpdump -i ens5
+```
+Captures packets on the selected interface.
+
+#### Capture a limited number of packets without name resolution
+```
+tcpdump -i ens5 -c 5 -n
+```
+Captures five packets and displays numeric IP addresses without DNS lookups.
+
+#### Save captured traffic to a file
+```
+tcpdump -i ens5 -w capture.pcap
+```
+Writes captured traffic to a .pcap file for later analysis.
+
+#### Read packets from a saved capture file
+```
+tcpdump -r capture.pcap -n
+```
+Reads packets from a capture file without resolving addresses.
+
+#### Capture SSH traffic
+```
+tcpdump -i any tcp port 22 -nn
+```
+Filters TCP traffic to or from port 22, typically SSH.
+
+#### Filter traffic by host
+```
+tcpdump host example.com -w http.pcap
+```
+Captures traffic exchanged with a specific host.
+
+#### Filter traffic by port
+```
+tcpdump -i ens5 port 53 -n
+```
+Captures DNS traffic on port 53.
+
+#### Filter traffic by protocol
+```
+tcpdump -i ens5 icmp -n
+```
+Captures ICMP traffic such as ping requests and replies.
+
+#### Filter packets from a source host in a pcap file
+```
+tcpdump -r traffic.pcap src host 192.168.124.1 -n
+```
+Displays packets from a specific source IP address.
+
+#### Count packets matching a filter
+```
+tcpdump -r traffic.pcap src host 192.168.124.1 -n | wc
+```
+Useful for measuring how much traffic matches a condition.
+
+#### Filter packets with only the TCP RST flag set
+```
+tcpdump -r traffic.pcap "tcp[tcpflags] == tcp-rst" -n
+```
+Useful for identifying reset behaviour in TCP communication.
+
+#### Display brief packet information
+```
+tcpdump -r TwoPackets.pcap -q
+```
+Shows shorter output with less packet detail.
+
+#### Display link-layer information such as MAC addresses
+```
+tcpdump -r TwoPackets.pcap -e
+```
+Useful for observing Ethernet layer details.
+
+#### Display packet contents as ASCII
+```
+tcpdump -r TwoPackets.pcap -A
+```
+Useful when packet contents include readable text.
+
+#### Display packet contents as hexadecimal
+```
+tcpdump -r TwoPackets.pcap -xx
+```
+Useful for lower level inspection when data is not human readable.
+
+#### Display packet contents in hex and ASCII
+```
+tcpdump -r TwoPackets.pcap -X
+```
+Useful for comparing raw data and readable content together.
 
 ---
 
