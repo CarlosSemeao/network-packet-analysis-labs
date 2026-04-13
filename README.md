@@ -203,4 +203,4 @@ These labs demonstrate practical packet-level visibility of real network communi
 
 Across SSH, HTTP, and command line packet filtering, the main lesson was clear: packet capture removes guesswork. It allows traffic to be validated directly, whether the goal is to confirm encrypted communication, inspect readable application data or isolate protocol behaviour using precise filters.
 
-This work strengthened my understanding of Linux networking, troubleshooting, and packet analysis in a practical way.
+This work strengthened my understanding of Linux networking, troubleshooting and packet analysis in a practical way.
