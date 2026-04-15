@@ -2,7 +2,7 @@
 
 ## Objective
 
-This repository documents two short hands on labs built to strengthen my practical understanding of network traffic analysis using packet capture.
+This repository documents hands on labs built to strengthen practical understanding of network traffic analysis, packet capture and network discovery using real tools.
 
 ---
 
@@ -197,10 +197,97 @@ Useful for comparing raw data and readable content together.
 
 ---
 
+### Evidence
+
+![Tcpdump Analysis](screenshots/tcpdump-analysis.png)
+
+The screenshot shows live packet capture using tcpdump, filtering traffic by protocol and port directly from the Linux terminal.
+
+This demonstrates the ability to inspect raw network traffic without relying on graphical tools, reinforcing command-line based analysis and troubleshooting skills.
+
+---
+
+## Lab 4: Nmap Network Discovery and Port Scanning
+
+### Scenario
+
+Executed Nmap from a Fedora Linux VM to perform host discovery and port scanning within a virtualised network environment. The scan was performed against the local VM (10.211.55.8), demonstrating services exposed by the VM itself, validating local network visibility and service enumeration techniques.
+
+The lab included:
+- Local host enumeration (self scan)
+- Service detection on the VM
+- Host discovery examples on both virtual and typical LAN ranges
+
+### What I observed
+
+- Live host discovery using ping scan (`-sn`)
+- Open TCP ports identified on the target system
+- Service detection revealing running services (e.g., SSH, HTTP)
+- Differences between scan types:
+  - Connect scan (`-sT`)
+  - SYN scan (`-sS`)
+- Impact of scan speed and timing options
+
+### Key Findings
+
+- Nmap automates host discovery and service enumeration efficiently
+- Open ports directly reveal potential attack surfaces
+- SYN scan is faster and more stealthy compared to full connect scan
+- Port scanning provides a clear map of exposed services
+
+### Evidence
+
+![Nmap Scan](screenshots/nmap-scan.png)
+
+The screenshot shows a real Nmap scan identifying open ports and services on a target system.
+
+### Commands Practised
+
+#### Discover live hosts (virtual network)
+```
+nmap -sn 10.211.55.0/24
+```
+
+#### Discover live hosts (real LAN example)
+```
+nmap -sn 192.168.1.0/24
+```
+
+#### Fast scan of common ports
+```
+nmap -F MACHINE_IP
+```
+
+#### SYN scan (stealth)
+```
+sudo nmap -sS MACHINE_IP
+```
+
+#### Service version detection
+```
+nmap -sV MACHINE_IP
+```
+
+#### Scan all ports
+```
+nmap -p- MACHINE_IP
+```
+
+#### Save scan results
+```
+nmap -oA scan_results MACHINE_IP
+```
+
 ## Conclusion
 
-These labs demonstrate practical packet-level visibility of real network communication using both `tshark` and `tcpdump`.
+This work demonstrates practical network visibility across three key layers:
 
-Across SSH, HTTP, and command line packet filtering, the main lesson was clear: packet capture removes guesswork. It allows traffic to be validated directly, whether the goal is to confirm encrypted communication, inspect readable application data or isolate protocol behaviour using precise filters.
+- Traffic capture (tcpdump)
+- Packet analysis (tshark)
+- Network discovery and service enumeration (Nmap)
 
-This work strengthened my understanding of Linux networking, troubleshooting and packet analysis in a practical way.
+Instead of relying on assumptions, these labs validate network behaviour directly at packet level.
+
+Together, these tools form a complete workflow: discover → capture → analyse.
+
+These techniques mirror workflows used in network troubleshooting, security analysis and incident investigation.
